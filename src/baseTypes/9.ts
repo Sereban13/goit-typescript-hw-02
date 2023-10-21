@@ -2,8 +2,17 @@
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
 type MixType = {
-[key: string]: string | number | Array<string> | object,
+  title: string,
+  likes: number,
+  accounts: Array<string>,
+  status: "open" | "close",
+  details?: {
+    createAt: Date,
+    updateAt: Date,
+  }
 }
+
+
 const page1: MixType = {
   title: 'The awesome page',
   likes: 100,
